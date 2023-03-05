@@ -1,0 +1,19 @@
+name: Alias
+main: Alias\Alias
+src-namespace-prefix: Alias
+version: 1.0.0
+api: 4.0.0
+
+load: STARTUP
+depend: ['economyCore']
+
+commands:
+  alias:
+    description: 别名主命令，可输入/alias help，获取命令使用方法
+    usage: "/alias"
+    permission: Alias.command.alias
+
+permissions:
+  Alias.command.alias:
+    description: "默认都可运行 /alias 指令"
+    default: true
